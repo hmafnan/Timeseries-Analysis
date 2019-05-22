@@ -4,3 +4,4 @@ tensorflow==1.13.1
 matplotlib==3.0.3
 fbprophet==0.5
 xlrd==1.2.0
+notebook==5.7.4

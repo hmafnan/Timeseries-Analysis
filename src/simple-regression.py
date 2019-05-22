@@ -1,23 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+from src import dataset
 import fbprophet
 from sklearn.ensemble.forest import RandomForestRegressor
 
-excel_file = "datasets/20160921-analysisofestimatedarrivals.xlsx"
+excel_file = "20160921-analysisofestimatedarrivals.xlsx"
 
-def load_data(file_name, skip_rows=14, cols=None):
-    if cols is None:
-        cols = [0, 1]
-    df = pd.read_excel(file_name, skiprows=skip_rows, usecols=cols)
-    headers = df.iloc[0]
-    df = df[1:]
-    df.columns = headers
-    df["Date"] = pd.to_datetime(df["Date"])
-    df =  df.set_index('Date')
-    return df
 
-df = load_data(excel_file)
+df = dataset.load_excel(excel_file)
 
 # Resample by weeks
 df = df.resample("W").sum()
