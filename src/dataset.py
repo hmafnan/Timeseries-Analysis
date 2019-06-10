@@ -14,7 +14,7 @@ def load_excel(file_name, skip_rows=14, cols=None):
     dir = "../datasets"
     path_ = os.path.join(dir, file_name)
     if cols is None:
-        cols = [0, 1]
+        cols = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     df = pd.read_excel(path_, skiprows=skip_rows, usecols=cols)
     headers = df.iloc[0]
     df = df[1:]
