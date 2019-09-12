@@ -6,3 +6,4 @@ fbprophet==0.5
 xlrd==1.2.0
 notebook==5.7.4
 statsmodels==0.9.0
+pydlm==0.1.1.11
