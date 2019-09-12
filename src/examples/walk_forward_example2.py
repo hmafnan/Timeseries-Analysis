@@ -6,7 +6,7 @@ import pandas as pd
 
 from math import sqrt
 # load data
-series = read_csv('../../datasets/dataset.csv', header=0)
+series = read_csv('../../datasets/example_datasets/dataset.csv', header=0)
 series["Month"] = pd.to_datetime(series["Month"])
 series = series.set_index('Month')
 

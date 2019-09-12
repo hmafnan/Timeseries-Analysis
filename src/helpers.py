@@ -31,8 +31,8 @@ def grid_search_arima(series, search_range=None):
         if arima_fit.aic <= lowest:
             lowest = arima_fit.aic
             lowest_combination = combination
-    #         print(combination, arima_fit.aic)
-    return (lowest_combination, lowest)
+    return lowest_combination, lowest
+
 
 # root mean squared error
 def measure_rmse(actual, predicted):
