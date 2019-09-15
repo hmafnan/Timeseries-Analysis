@@ -2,16 +2,17 @@ import os
 import pandas as pd
 
 
-def load_excel(file_name, skip_rows=14, cols=None):
+def load_excel(file_name, skip_rows=14, cols=None, dir="../datasets"):
     """
     Load excel file as data frame.
 
     :param file_name: name of excel file
     :param skip_rows: Rows to skip in excel file
     :param cols: Column index to be loaded
+    :param dir: Base dirrectory for datasets
     :return: Pandas data frame
     """
-    dir = "../datasets"
+    dir = dir
     path_ = os.path.join(dir, file_name)
     if cols is None:
         cols = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
