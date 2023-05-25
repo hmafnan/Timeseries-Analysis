@@ -11,4 +11,4 @@ statsmodels==0.9.0
 pydlm==0.1.1.11
 Cython==0.29.7
 pytz==2019.1
-tornado==5.1.1
+tornado==6.3.2
